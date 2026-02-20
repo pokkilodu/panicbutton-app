@@ -1,6 +1,5 @@
 // Sample database models stored in localStorage for a static demo
 export const DB = {
-  USERS_KEY: 'ap_users_v1',
   SUBJECTS_KEY: 'ap_subjects_v1',
   QUESTIONS_KEY: 'ap_questions_v1',
   PERFORMANCE_KEY: 'ap_performance_v1'
@@ -8,9 +7,6 @@ export const DB = {
 
 export function defaultSchemas(){
   return {
-    users: [
-      {id:'u1',name:'Demo Student',email:'demo@example.com'}
-    ],
     subjects: [
       {id:'s1',name:'Mathematics',chapters:['Algebra','Calculus','Probability']}
     ],
@@ -30,11 +26,8 @@ export function write(key, value){
 }
 
 export function ensureSeed(){
-  if(!read(DB.USERS_KEY)){
-    const s = defaultSchemas();
-    write(DB.USERS_KEY,s.users);
-    write(DB.SUBJECTS_KEY,s.subjects);
-    write(DB.QUESTIONS_KEY,s.questions);
-    write(DB.PERFORMANCE_KEY,s.performance);
-  }
+  const s = defaultSchemas();
+  if(!read(DB.SUBJECTS_KEY)) write(DB.SUBJECTS_KEY,s.subjects);
+  if(!read(DB.QUESTIONS_KEY)) write(DB.QUESTIONS_KEY,s.questions);
+  if(!read(DB.PERFORMANCE_KEY)) write(DB.PERFORMANCE_KEY,s.performance);
 }
