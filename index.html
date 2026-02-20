@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adaptive Exam Prep — Demo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Adaptive Exam Prep</h1>
+    <div class="controls">
+      <button id="theme-toggle">Toggle Theme</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel glass" id="dashboard">
+      <h2>Dashboard</h2>
+      <div id="subjects"></div>
+      <button id="new-subject">+ Add Sample Subject</button>
+    </section>
+
+    <section class="panel glass" id="study">
+      <h2>Study Session</h2>
+      <div id="session-area">Start a session from a subject</div>
+      <div class="session-controls">
+        <button id="start-session">Start Adaptive Session</button>
+        <button id="start-mock">Start Mock Test</button>
+      </div>
+    </section>
+
+    <section class="panel glass" id="analytics">
+      <h2>Performance Analytics</h2>
+      <div id="analytics-area">No data yet</div>
+    </section>
+  </main>
+
+  <footer class="app-footer">Static demo — Host on GitHub Pages</footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
