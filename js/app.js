@@ -20,7 +20,7 @@ function handleCTAs(){
   const nameInput = safeQuery('user-name');
   const ageInput = safeQuery('user-age');
   const classInput = safeQuery('user-class');
-  const courseInput = safeQuery('user-course');
+  // courseInput removed, combined with classInput
 
   if(explore){ explore.onclick = ()=>{ document.getElementById('features').scrollIntoView({behavior:'smooth'}); } }
   if(start){ start.onclick = ()=>{ startPreparationFlow(); } }
@@ -29,15 +29,12 @@ function handleCTAs(){
       const v = nameInput.value.trim();
       const age = ageInput && ageInput.value.trim();
       const cls = classInput && classInput.value.trim();
-      const course = courseInput && courseInput.value.trim();
       if(!v) return alert('Enter a name');
       if(!age) return alert('Enter your age');
-      if(!cls) return alert('Enter your class/grade');
-      if(!course) return alert('Enter your course/program');
+      if(!cls) return alert('Enter your class/grade, course/program');
       localStorage.setItem('np_user_name', v);
       localStorage.setItem('np_user_age', age);
       localStorage.setItem('np_user_class', cls);
-      localStorage.setItem('np_user_course', course);
       personalizeHeader();
       saveName.innerText='Saved';
       setTimeout(()=>saveName.innerText='Personalize',1000);
