@@ -3,41 +3,126 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Adaptive Exam Prep — Demo</title>
+  <title>NeuroPrep AI — Adaptive Exam Preparation</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="app-header">
-    <h1>Adaptive Exam Prep</h1>
-    <div class="controls">
-      <button id="theme-toggle">Toggle Theme</button>
+  <div class="hero-bg"></div>
+  <header class="site-header">
+    <div class="brand">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><defs></defs>
+        <rect x="2" y="2" width="20" height="20" rx="5" fill="#ffffff22"/>
+        <path d="M6 15l4-8 4 8" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="brand-text">
+        <div class="title">NeuroPrep AI</div>
+        <div class="tag">AI-Powered Adaptive Exam Preparation</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="theme-toggle" class="ghost">Dark</button>
+      <button id="cta-top" class="primary">Start Your Preparation</button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="panel glass" id="dashboard">
-      <h2>Dashboard</h2>
-      <div id="subjects"></div>
-      <button id="new-subject">+ Add Sample Subject</button>
-    </section>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1>AI-Powered Adaptive Exam Preparation Platform</h1>
+          <p class="sub">Smart 1-hour structured learning system: <strong>30 min</strong> deep theory, <strong>15 min</strong> bullet reinforcement, <strong>10 min</strong> diagrams &amp; mind maps, <strong>5 min</strong> rapid summary.</p>
 
-    <section class="panel glass" id="study">
-      <h2>Study Session</h2>
-      <div id="session-area">Start a session from a subject</div>
-      <div class="session-controls">
-        <button id="start-session">Start Adaptive Session</button>
-        <button id="start-mock">Start Mock Test</button>
+          <div class="hero-ctas">
+            <button id="start-prep" class="primary large">Start Your Preparation</button>
+            <button id="explore-features" class="secondary">Explore Features</button>
+          </div>
+
+          <div class="personalize">
+            <label for="user-name">Start by entering your name to personalize your journey</label>
+            <div class="input-row">
+              <input id="user-name" placeholder="Your name" />
+              <button id="save-name" class="ghost">Personalize</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="card glass hero-graph">
+            <div class="mini-header">Adaptive Plan</div>
+            <ul class="plan-list">
+              <li><strong>Deep Theory</strong> — 30 min</li>
+              <li><strong>Reinforcement</strong> — 15 min</li>
+              <li><strong>Mindmaps & Diagrams</strong> — 10 min</li>
+              <li><strong>Rapid Summary</strong> — 5 min</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="panel glass" id="analytics">
-      <h2>Performance Analytics</h2>
-      <div id="analytics-area">No data yet</div>
+    <section id="features" class="features">
+      <h2>Core Features</h2>
+      <p class="muted">Intelligent components that adapt to you — study smarter, not harder.</p>
+      <div class="feature-grid">
+        <article class="feature-card glass">
+          <div class="icon"> <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h10M4 18h8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>AI 1-Hour Adaptive Study Engine</h3>
+          <p>Personalized phase-by-phase study plan that auto-adjusts to your weak areas.</p>
+        </article>
+
+        <article class="feature-card glass">
+          <div class="icon"> <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M7 7v12a2 2 0 002 2h6a2 2 0 002-2V7" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Previous Question Paper Intelligence</h3>
+          <p>Analyze trends and frequency from previous years to detect topic weightage.</p>
+        </article>
+
+        <article class="feature-card glass">
+          <div class="icon"> <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 20v-8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12l6-6 6 6" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Predicted Question Generator</h3>
+          <p>LLM-assisted predicted questions tailored to recent trends and your weak topics.</p>
+        </article>
+
+        <article class="feature-card glass">
+          <div class="icon"> <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Mock Tests & Performance Analytics</h3>
+          <p>Simulate real exams, get auto-evaluations, difficulty scores and visual analytics.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="exam-intel" class="exam-intel">
+      <h2>Exam Intelligence</h2>
+      <div class="intel-grid">
+        <div class="intel-card glass">
+          <h4>Subject-wise Exam Patterns</h4>
+          <p class="muted">Overview of how questions are distributed across subjects and chapters.</p>
+        </div>
+        <div class="intel-card glass">
+          <h4>Marks Distribution Insights</h4>
+          <p class="muted">Heatmaps and charts to highlight high-mark topics.</p>
+        </div>
+        <div class="intel-card glass">
+          <h4>Difficulty Scoring</h4>
+          <p class="muted">Per-question difficulty estimates, combined with historical correctness.</p>
+        </div>
+        <div class="intel-card glass">
+          <h4>Trend Prediction</h4>
+          <div id="trend-vis" class="trend-vis">[Trend visualization placeholder]</div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="app-footer">Static demo — Host on GitHub Pages</footer>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>NeuroPrep AI — Empowering learners with intelligent study journeys.</div>
+      <div class="small muted">© <span id="year"></span> NeuroPrep Labs • Minimal academic branding</div>
+    </div>
+  </footer>
 
   <script type="module" src="js/app.js"></script>
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
 </body>
 </html>
