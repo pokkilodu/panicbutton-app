@@ -18,10 +18,27 @@ function handleCTAs(){
   const explore = safeQuery('explore-features');
   const saveName = safeQuery('save-name');
   const nameInput = safeQuery('user-name');
+  const ageInput = safeQuery('user-age');
+  const classInput = safeQuery('user-class');
 
   if(explore){ explore.onclick = ()=>{ document.getElementById('features').scrollIntoView({behavior:'smooth'}); } }
   if(start){ start.onclick = ()=>{ startPreparationFlow(); } }
-  if(saveName && nameInput){ saveName.onclick = ()=>{ const v = nameInput.value.trim(); if(!v) return alert('Enter a name'); localStorage.setItem('np_user_name', v); personalizeHeader(); saveName.innerText='Saved'; setTimeout(()=>saveName.innerText='Personalize',1000); } }
+  if(saveName && nameInput){
+    saveName.onclick = ()=>{
+      const v = nameInput.value.trim();
+      const age = ageInput && ageInput.value.trim();
+      const cls = classInput && classInput.value.trim();
+      if(!v) return alert('Enter a name');
+      if(!age) return alert('Enter your age');
+      if(!cls) return alert('Enter your class/grade');
+      localStorage.setItem('np_user_name', v);
+      localStorage.setItem('np_user_age', age);
+      localStorage.setItem('np_user_class', cls);
+      personalizeHeader();
+      saveName.innerText='Saved';
+      setTimeout(()=>saveName.innerText='Personalize',1000);
+    }
+  }
 }
 
 function personalizeHeader(){

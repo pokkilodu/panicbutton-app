@@ -1,3 +1,28 @@
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="steps-grid">
+        <div class="step-card glass">
+          <div class="step-icon">1</div>
+          <h3>Create Account</h3>
+          <p>Enter your Name, Email, Password, Phone Number, Age, Class, and Pursuing Level to get started.</p>
+        </div>
+        <div class="step-card glass">
+          <div class="step-icon">2</div>
+          <h3>Select Subjects</h3>
+          <p>Choose your subjects to personalize your study plan and mock tests.</p>
+        </div>
+        <div class="step-card glass">
+          <div class="step-icon">3</div>
+          <h3>Start Adaptive Study Sessions</h3>
+          <p>Begin AI-powered study sessions tailored to your strengths and weaknesses.</p>
+        </div>
+        <div class="step-card glass">
+          <div class="step-icon">4</div>
+          <h3>Track Progress & Improve</h3>
+          <p>Monitor your performance, review analytics, and continuously improve.</p>
+        </div>
+      </div>
+    </section>
 <!doctype html>
 <html lang="en">
 <head>
@@ -38,9 +63,11 @@
           </div>
 
           <div class="personalize">
-            <label for="user-name">Start by entering your name to personalize your journey</label>
+            <label for="user-name">Start by entering your details to personalize your journey</label>
             <div class="input-row">
               <input id="user-name" placeholder="Your name" />
+              <input id="user-age" type="number" min="10" max="99" placeholder="Age" style="width:80px" />
+              <input id="user-class" placeholder="Class/Grade" style="width:110px" />
               <button id="save-name" class="ghost">Personalize</button>
             </div>
           </div>
