@@ -68,12 +68,15 @@
             <div class="input-row">
               <input id="user-name" placeholder="Your name" />
               <input id="user-age" type="number" min="10" max="99" placeholder="Age" style="width:80px" />
-                <div style="display:flex;flex-direction:column;align-items:flex-start;">
-                  <input id="user-class" placeholder="Class/Grade" style="width:110px;margin-bottom:6px;" />
-                  <div style="background:#f7f7ff;border-radius:8px;padding:8px 12px;width:140px;box-shadow:0 2px 8px #6C63FF11;margin-bottom:6px;">
-                    <input id="user-course" placeholder="Course/Program" style="width:100%;border:none;background:transparent;font-size:1em;outline:none;" />
-                  </div>
-                </div>
+                <select id="user-class" style="width:110px">
+                  <option value="">Select Class/Grade</option>
+                  <option value="up-5">UP 5</option>
+                  <option value="up-6">UP 6</option>
+                  <option value="up-7">UP 7</option>
+                  <option value="hs-8">HS 8</option>
+                  <option value="hs-9">HS 9</option>
+                  <option value="hs-10">HS 10</option>
+                </select>
               <button id="save-name" class="ghost">Personalize</button>
             </div>
           </div>
