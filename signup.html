@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up — Adaptive Exam Prep</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <style>
+    body{background:linear-gradient(120deg,#6C63FF 60%,#FF6584 100%);font-family:'Poppins',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;}
+    .signup-container{background:rgba(255,255,255,0.13);backdrop-filter:blur(12px);border-radius:18px;box-shadow:0 8px 32px #6C63FF33;padding:36px 28px;width:100%;max-width:420px;display:flex;flex-direction:column;align-items:center;}
+    .logo{margin-bottom:18px;}
+    .logo img{width:48px;height:48px;}
+    .signup-title{font-size:1.4rem;font-weight:600;color:#6C63FF;margin-bottom:8px;}
+    .signup-form{width:100%;display:flex;flex-direction:column;gap:16px;}
+    .input-group{position:relative;}
+    .input-group input{width:100%;padding:12px 38px 12px 12px;border-radius:12px;border:1.5px solid #d1d1ff;background:rgba(255,255,255,0.92);font-size:1rem;transition:border-color .18s;}
+    .input-group input:focus{border-color:#6C63FF;outline:none;}
+    .input-group .toggle{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:#6C63FF;font-size:1.1rem;cursor:pointer;}
+    .input-group .toggle:active{color:#FF6584;}
+    .error-msg{color:#FF6584;font-size:0.92rem;margin-top:-10px;margin-bottom:6px;}
+    .strength-bar{height:6px;border-radius:4px;background:#eee;margin-top:4px;transition:background .18s;}
+    .strength-bar[data-strength="1"]{background:#FF6584;}
+    .strength-bar[data-strength="2"]{background:#FFB84D;}
+    .strength-bar[data-strength="3"]{background:#34c38f;}
+    .signup-btn{background:linear-gradient(90deg,#6C63FF,#FF6584);color:#fff;font-weight:600;padding:14px 0;border:none;border-radius:12px;font-size:1.1rem;box-shadow:0 4px 18px #6C63FF33;cursor:pointer;transition:background .18s,transform .18s;}
+    .signup-btn:hover{background:linear-gradient(90deg,#FF6584,#6C63FF);transform:translateY(-2px);}
+    .terms{display:flex;align-items:center;font-size:0.98rem;color:#555;margin-top:6px;}
+    .terms input{margin-right:8px;}
+    .login-link{margin-top:12px;font-size:0.98rem;color:#6C63FF;text-align:center;}
+    .login-link a{color:#FF6584;text-decoration:none;font-weight:600;}
+    @media(max-width:500px){.signup-container{padding:18px 6px;}}
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <div class="logo"><img src="/logo.png" alt="Pb-Winns"></div>
+    <div class="signup-title">Create Your Account</div>
+    <form class="signup-form" id="signupForm" autocomplete="off">
+      <div class="input-group">
+        <input type="text" id="username" placeholder="Username" required />
+      </div>
+      <div class="input-group">
+        <input type="email" id="email" placeholder="Email ID" required />
+        <div class="error-msg" id="emailError"></div>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="button" class="toggle" id="togglePwd">👁️</button>
+        <div class="strength-bar" id="strengthBar" data-strength="0"></div>
+        <div class="error-msg" id="pwdError"></div>
+      </div>
+      <div class="input-group">
+        <input type="password" id="confirmPwd" placeholder="Confirm Password" required />
+        <button type="button" class="toggle" id="toggleConfirm">👁️</button>
+        <div class="error-msg" id="confirmError"></div>
+      </div>
+      <button class="signup-btn" type="submit">Sign Up</button>
+      <div class="terms">
+        <input type="checkbox" id="terms" required />
+        <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+      </div>
+      <div class="login-link">Already have an account? <a href="login.html">Login</a></div>
+    </form>
+  </div>
+  <script>
+    // Email validation
+    const email = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+    email.addEventListener('input',()=>{
+      const val = email.value.trim();
+      emailError.textContent = (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val)) ? '' : 'Enter a valid email address.';
+    });
+    // Password strength
+    const pwd = document.getElementById('password');
+    const strengthBar = document.getElementById('strengthBar');
+    const pwdError = document.getElementById('pwdError');
+    pwd.addEventListener('input',()=>{
+      const val = pwd.value;
+      let strength = 0;
+      if(val.length>=8) strength++;
+      if(/[A-Z]/.test(val)) strength++;
+      if(/[0-9]/.test(val)) strength++;
+      strengthBar.dataset.strength = strength;
+      pwdError.textContent = strength<2 ? 'Password is weak.' : '';
+    });
+    // Show/hide password
+    document.getElementById('togglePwd').onclick = ()=>{
+      pwd.type = pwd.type==='password' ? 'text':'password';
+    };
+    const confirmPwd = document.getElementById('confirmPwd');
+    document.getElementById('toggleConfirm').onclick = ()=>{
+      confirmPwd.type = confirmPwd.type==='password' ? 'text':'password';
+    };
+    // Confirm password validation
+    const confirmError = document.getElementById('confirmError');
+    confirmPwd.addEventListener('input',()=>{
+      confirmError.textContent = confirmPwd.value!==pwd.value ? 'Passwords do not match.' : '';
+    });
+    // Form submit
+    document.getElementById('signupForm').onsubmit = function(e){
+      e.preventDefault();
+      if(emailError.textContent || pwdError.textContent || confirmError.textContent){
+        return;
+      }
+      if(!document.getElementById('terms').checked){
+        alert('You must agree to the Terms and Conditions.');
+        return;
+      }
+      // Success (demo)
+      alert('Account created successfully!');
+      this.reset();
+      strengthBar.dataset.strength = 0;
+    };
+  </script>
+</body>
+</html>
