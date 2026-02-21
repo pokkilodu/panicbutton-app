@@ -86,13 +86,13 @@ N/A
 
 #### Screenshots (Add at least 3)
 
-![Home Page](images/screenshot-home.png)
+![Home Page](/screenshot1-home.png)
 *Home page with emergency button and quick access*
 
-![Dashboard](images/screenshot-dashboard.png)
+![Dashboard](/Screenshot2-dashboard.png)
 *Dashboard showing alerts and analytics*
 
-![AI Insights](images/screenshot-ai.png)
+![AI Insights](/Screenshot3-ai.png)
 *AI-powered insights and recommendations*
 
 #### Diagrams
