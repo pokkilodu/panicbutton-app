@@ -51,7 +51,7 @@ button:active{transform:translateY(1px)}
 
 .site-header{display:flex;justify-content:space-between;align-items:center;padding:20px 36px;color:white}
 .brand{display:flex;align-items:center;gap:12px}
-.brand-text .title{font-weight:700}
+.brand-text .title{font-weight:700;font-size:1.3rem}
 .brand-text .tag{font-size:12px;opacity:0.9}
 .header-actions button{margin-left:10px}
 
