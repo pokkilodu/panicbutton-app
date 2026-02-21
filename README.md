@@ -86,14 +86,15 @@ N/A
 
 #### Screenshots (Add at least 3)
 
-![Home Page](/screenshot1-home.png)
-*Home page with emergency button and quick access*
-
-![Dashboard](/Screenshot2-dashboard.png)
-*Dashboard showing alerts and analytics*
-
-![AI Insights](/Screenshot3-ai.png)
-*AI-powered insights and recommendations*
+ <p align="center">
+	<img src="./img.png" alt="Project Banner" width="100%">
+</p>
+<p align="center">
+	<img src="./img.png" alt="Project Banner" width="100%">
+</p>
+<p align="center">
+	<img src="./img.png" alt="Project Banner" width="100%">
+</p>
 
 #### Diagrams
 
