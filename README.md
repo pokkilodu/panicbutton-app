@@ -7,23 +7,29 @@
 
 ## Basic Details
 
-### Team Name: [Your Team Name]
+### Team Name: LogicalLooms
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: NANDHANA ANIL - VJCET,VAZHAKULLAM
+- Member 2: HELEN V.B - VJCET,VAZHAKULLAM
 
 ### Hosted Project Link
 panicbutton-app-swart.vercel.app
 
 ### Project Description
-PanicButton App is a web-based emergency alert system designed to help users quickly notify authorities and contacts in case of distress. The app leverages AI to analyze situations and provide real-time insights, ensuring rapid and effective response during emergencies.
+chillPrep is an AI-powered adaptive exam preparation platform that personalizes study sessions for students. It provides structured 1-hour learning modules, predicted questions, previous year analysis, AI-generated summaries, diagrams, and mind maps.
 
 ### The Problem statement
-In emergencies, timely communication and accurate information are critical. Many people lack a simple, accessible way to alert help and share vital details instantly.
+Students face:
+Exam stress and panic
+Lack of structured revision
+Poor time management
+No proper analysis of previous question trends
+Overwhelming syllabus before exams
+Most platforms provide content, but not adaptive intelligence.
 
 ### The Solution
-PanicButton App provides a one-click emergency alert system with AI-powered analytics, location sharing, and instant notifications to both authorities and trusted contacts, streamlining the process of getting help.
+ChillPrep App provides a one-click emergency alert system with AI-powered analytics, location sharing, and instant notifications to both authorities and trusted contacts, streamlining the process of getting help.
 
 ---
 
@@ -33,8 +39,6 @@ PanicButton App provides a one-click emergency alert system with AI-powered anal
 
 **For Software:**
 - Languages used: JavaScript, HTML, CSS
-- Frameworks used: None (Vanilla JS)
-- Libraries used: [Add if any, e.g., Chart.js]
 - Tools used: VS Code, Git
 
 **For Hardware:**
@@ -47,11 +51,15 @@ PanicButton App provides a one-click emergency alert system with AI-powered anal
 ## Features
 
 List the key features of your project:
-- Emergency alert button for instant help
-- Real-time location sharing
-- AI-powered situation analysis
-- Dashboard for authorities and users
-- Notification system for trusted contacts
+     AI Adaptive 1-Hour Study Engine
+	 Personalized Student Dashboard
+	 Previous Year Question Trend Analysis
+     AI Predicted Questions Generator
+     Mock Test Simulator
+     Performance Analytics & Weak Area Detection
+     PDF Summary & Mindmap Generator
+     Pink-Blue Glassmorphism UI
+     Stress Reduction Guidance Mode
 
 ---
 
@@ -100,13 +108,67 @@ N/A
 
 **System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
-*Shows the flow between user, AI engine, and authorities*
+Architecture Explanation:
+Frontend: Next.js (App Router)
+Backend API routes (Node.js)
+MongoDB database
+AI service integration layer
+REST-based communication
+Deployment via Vercel
+Flow:
+User → Frontend → API Routes → AI Service → Database → Response → Dashboard
 
 **Application Workflow:**
 
-![Workflow](docs/workflow.png)
-*User triggers alert → AI analyzes → Notifications sent → Dashboard updates*
+┌─────────────┐
+│   Student   │
+│   (User)    │
+└──────┬──────┘
+       │
+       ▼
+┌───────────────────────┐
+│   ChillPrep Frontend  │
+│   (Next.js Dashboard) │
+│  - Login / Dashboard  │
+│  - Study Module UI    │
+│  - Mock Tests         │
+└──────┬────────────────┘
+       │ REST API Calls
+       ▼
+┌──────────────────────────┐
+│     Backend API Layer    │
+│     (Node.js / API)      │
+│  - Auth & User Logic     │
+│  - Session Management   │
+│  - Data Processing      │
+└──────┬───────────────────┘
+       │
+       ├───────────────┐
+       ▼               ▼
+┌───────────────┐   ┌──────────────────┐
+│   AI Engine   │   │    Database      │
+│ (AI Services)│   │   (MongoDB)       │
+│ - Question   │   │ - User Profiles  │
+│   Prediction │   │ - Progress Data  │
+│ - Summaries  │   │ - Test Results   │
+│ - Mindmaps  │   └──────────────────┘
+└──────┬────────┘
+       │ AI Response
+       ▼
+┌──────────────────────────┐
+│   Processed Insights     │
+│ - Weak Areas             │
+│ - Predicted Questions    │
+│ - Study Recommendations  │
+└──────┬───────────────────┘
+       │
+       ▼
+┌──────────────────────────┐
+│   Student Dashboard      │
+│ - Personalized Study     │
+│ - Performance Analytics  │
+│ - Stress Reduction Mode  │
+└──────────────────────────┘
 
 ---
 
@@ -126,38 +188,12 @@ N/A
 
 #### API Documentation
 
-**Base URL:** `[Add your API base URL here]`
-
-##### Endpoints
-
-**POST /api/alert**
-- **Description:** Trigger an emergency alert
-- **Request Body:**
-```json
-{
-	"userId": "string",
-	"location": "string",
-	"details": "string"
-}
-```
-- **Response:**
-```json
-{
-	"status": "success",
-	"message": "Alert sent"
-}
-```
-
-[Add more endpoints as needed...]
-
----
+N/A
 
 ## Project Demo
 
 ### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
-
-*The video demonstrates the emergency alert workflow, dashboard analytics, and AI-powered insights.*
+https://drive.google.com/file/d/1FVEmuGVZCCiuP_KqWKq3LMg-lsjd1z2o/view?usp=drive_link
 
 ### Additional Demos
 [Add any extra demo materials/links - Live site, APK download, online demo, etc.]
@@ -191,8 +227,8 @@ If you used AI tools during development, document them here for transparency:
 
 ## Team Contributions
 
-- [Name 1]: Frontend development, UI/UX design
-- [Name 2]: Backend integration, AI analytics
+- [NANDHANA ANIL]: Frontend development, UI/UX design
+- [HELEN V.B]: Backend integration, AI analytics
 
 ---
 
@@ -202,7 +238,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Common License Options:**
 - MIT License (Permissive, widely used)
-- Apache 2.0 (Permissive with patent grant)
-- GPL v3 (Copyleft, requires derivative works to be open source)
+
 
 ---
