@@ -14,7 +14,7 @@
 - Member 2: [Name] - [College]
 
 ### Hosted Project Link
-[Add your hosted project link here]
+panicbutton-app-swart.vercel.app
 
 ### Project Description
 PanicButton App is a web-based emergency alert system designed to help users quickly notify authorities and contacts in case of distress. The app leverages AI to analyze situations and provide real-time insights, ensuring rapid and effective response during emergencies.
@@ -87,13 +87,13 @@ N/A
 #### Screenshots (Add at least 3)
 
  <p align="center">
-	<img src="./img.png" alt="Project Banner" width="100%">
+	<img src="./screenshot1.png" alt="Project Banner" width="100%">
 </p>
 <p align="center">
-	<img src="./img.png" alt="Project Banner" width="100%">
+	<img src="./Screenshot2.png" alt="Project Banner" width="100%">
 </p>
 <p align="center">
-	<img src="./img.png" alt="Project Banner" width="100%">
+	<img src="./Screenshot3.png" alt="Project Banner" width="100%">
 </p>
 
 #### Diagrams
