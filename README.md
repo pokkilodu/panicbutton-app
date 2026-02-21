@@ -93,7 +93,7 @@ N/A
 	<img src="./Screenshot2.png" alt="Project Banner" width="100%">
 </p>
 <p align="center">
-	<img src="./Screenshot3.png" alt="Project Banner" width="100%">
+	<img src="./Screenshot4.png" alt="Project Banner" width="100%">
 </p>
 
 #### Diagrams
